@@ -22,7 +22,7 @@
 >
   <IconButton {icon} on:click={() => (showing_popup = !showing_popup)} />
   {#if showing_popup}
-    <div class="popup" in:fade|global={{ duration: 100 }}>
+    <div class="popup" in:fade={{ duration: 100 }}>
       {#if !active_submenu}
         <div class="options">
           {#each options as { on_click, icon, label, submenu }}
@@ -47,7 +47,7 @@
         </div>
       {:else if active_submenu}
         {@const { title, options, button } = active_submenu}
-        <div class="submenu" in:fade|global={{ duration: 100 }}>
+        <div class="submenu" in:fade={{ duration: 100 }}>
           <header>
             <span>{title}</span>
             <button

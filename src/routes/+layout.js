@@ -21,7 +21,7 @@ export async function load(event) {
   } = await supabase.auth.getSession()
 
   if (!session && !event.url.pathname.startsWith('/auth')) {
-    redirect(303, '/auth');
+    throw redirect(303, '/auth')
   } else if (session) {
     // const site = event.params['site']
     const { sites, user } = await Promise.all([

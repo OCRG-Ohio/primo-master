@@ -46,7 +46,7 @@
       {:else}
         <span class="sr-only">Copied</span>
         <svg
-          in:fade|global
+          in:fade
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"

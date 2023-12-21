@@ -8,7 +8,7 @@ export async function load({ depends, params, parent }) {
 
   if (!session) {
     // the user is not signed in
-    redirect(303, '/auth');
+    throw redirect(303, '/auth')
   }
 
   // Get site and page
@@ -42,9 +42,9 @@ export async function load({ depends, params, parent }) {
   }
 
   if (!site) {
-    redirect(303, '/');
+    throw redirect(303, '/')
   } else if (!page && page_url !== 'index') {
-    redirect(303, `/${site_url}/index`);
+    throw redirect(303, `/${site_url}/index`)
   }
 
   // Get sorted pages, symbols, and sections

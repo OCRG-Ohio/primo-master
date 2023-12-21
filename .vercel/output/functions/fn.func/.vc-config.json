@@ -1,6 +1,0 @@
-{
-	"runtime": "nodejs18.x",
-	"handler": "..\\..\\..\\Practice\\primo-master\\.svelte-kit\\vercel-tmp\\index.js",
-	"launcherType": "Nodejs",
-	"experimentalResponseStreaming": true
-}

@@ -2,7 +2,7 @@
   import { fade } from 'svelte/transition'
 </script>
 
-<svg in:fade|global xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+<svg in:fade xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
   <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
   <path
     fill="currentColor"
