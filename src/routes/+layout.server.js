@@ -10,14 +10,14 @@ export const load = async ({ url, locals: { supabase, getSession } }) => {
 
     // Ensure symbols have an index column (v2.0.0--beta.15)
     if (!symbol) {
-      throw redirect(303, '/update-notice?alert=missing-symbol-index')
+      redirect(303, '/update-notice?alert=missing-symbol-index');
     }
     
   } else if (url.pathname === '/update-notice') {
     if (
       symbol && url.searchParams.get('alert') === 'missing-symbol-index' 
     ) {
-      throw redirect(303, '/')
+      redirect(303, '/');
     }
   }
 

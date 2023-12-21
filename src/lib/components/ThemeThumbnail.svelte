@@ -13,7 +13,7 @@
   class="theme-thumbnail"
   class:selected
   type="button"
-  in:fade={{ duration: 100 }}
+  in:fade|global={{ duration: 100 }}
   on:click={() => {
     selected = true
     dispatch('click')
