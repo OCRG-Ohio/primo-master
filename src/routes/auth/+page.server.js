@@ -12,10 +12,10 @@ export async function load({ url, parent }) {
     const {data:existing_users} = await supabase_admin.from('users').select('*')
     const initiated = existing_users?.length > 0
     if (!initiated) {
-      throw redirect(303, '?signup')
+      redirect(303, '?signup');
     }
   } else if (session && !joining_server) {
-    throw redirect(303, '/')
+    redirect(303, '/');
   }
 }
 

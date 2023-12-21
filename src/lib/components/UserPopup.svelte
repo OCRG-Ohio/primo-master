@@ -23,7 +23,7 @@
 	</button>
 
 	{#if showing_popup}
-		<div class="popup" in:fade={{ duration: 100 }}>
+		<div class="popup" in:fade|global={{ duration: 100 }}>
 			<div class="row">
 				<Letter letter={user.email.slice(0, 1)} />
 				<span class="email">{user.email}</span>
